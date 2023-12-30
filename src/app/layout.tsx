@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "@/components/shared/navbar";
+import Header from "@/components/shared/header";
+import Footer from "@/components/shared/footer";
+import Carousel from "@/components/shared/carousel";
 
 export const metadata: Metadata = {
   title: "Trevel.ai",
@@ -13,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="relative">
+        <Header />
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
