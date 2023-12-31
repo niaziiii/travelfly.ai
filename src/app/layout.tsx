@@ -1,12 +1,13 @@
+import Head from "next/head";
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/shared/navbar";
 import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
-import Carousel from "@/components/shared/carousel";
+import BackToTopButton from "@/components/shared/backtoTop";
 
 export const metadata: Metadata = {
-  title: "Trevel.ai",
+  title: "Trevelfly",
   description: "The Home Landing Page",
 };
 
@@ -17,11 +18,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/public/travelfly.png" />
+      </Head>
       <body className="relative">
         <Header />
         <NavBar />
         {children}
         <Footer />
+        <BackToTopButton />
       </body>
     </html>
   );
