@@ -3,7 +3,7 @@ import React from "react";
 const PlacesCard = () => {
   return (
     <>
-      <div className="my-2 mx-1 lg:max-w-64 md:max-w-56 sm:w-full xs:w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div className="my-2 mx-1 lg:max-w-60 md:max-w-56 sm:w-full xs:w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img
             className="rounded-t-lg w-full"

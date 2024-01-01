@@ -1,14 +1,17 @@
 import Head from "next/head";
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "@/components/shared/navbar";
-import Header from "@/components/shared/header";
-import Footer from "@/components/shared/footer";
+import NavBar from "@/components/layout/navbar";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 import BackToTopButton from "@/components/shared/backtoTop";
 
 export const metadata: Metadata = {
   title: "Trevelfly",
   description: "The Home Landing Page",
+  icons: {
+    icon: "/travelfly.png",
+  },
 };
 
 export default function RootLayout({
@@ -18,9 +21,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/public/travelfly.png" />
-      </Head>
       <body className="relative">
         <Header />
         <NavBar />

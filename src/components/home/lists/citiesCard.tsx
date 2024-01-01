@@ -3,7 +3,7 @@ import React from "react";
 const CitiesCard = () => {
   return (
     <>
-      <div className="my-2 mx-1 lg:max-w-72 rounded-md md:max-w-56 sm:w-full xs:w-full bg-white border border-gray-200  shadow ">
+      <div className="my-2 mx-1 lg:max-w-60 rounded-md md:max-w-56 sm:w-full xs:w-full bg-white border border-gray-200  shadow ">
         <div className="relative">
           <img
             className="rounded-t-md w-full"
