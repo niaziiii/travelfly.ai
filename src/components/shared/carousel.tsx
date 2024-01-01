@@ -1,23 +1,25 @@
 "use client";
 import React from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-// import required modules
 import { Autoplay } from "swiper/modules";
+export default function Carousel({ slidesData }: any) {
+  // Array of slide data
 
-export default function Carousel() {
   return (
     <>
       <div className="w-full h-full relative">
-        <div className="absolute top-10 left-14 z-10">
-          <h1
-            className="font-extrabold text-6xl text-white font-serif "
-            style={{ letterSpacing: -6, lineHeight: 1.1 }}
-          >
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-10  text-white">
+          <h1 className="font-extrabold text-6xl font-serif space-x-1 drop-shadow-xl">
             Relax & Enjoy
             <br /> the World
           </h1>
+          <p className="text-lg drop-shadow-xl">
+            We believe that there are a huge best and beautiful cities
+            destinations in the world. Every city perhaps will become closer to
+            you. Just simply search and compare the best hotels and flights
+            price with our travel finder.
+          </p>
         </div>
         <Swiper
           slidesPerView={1}
@@ -25,23 +27,17 @@ export default function Carousel() {
           loop={true}
           modules={[Autoplay]}
           autoplay={{
-            delay: 2000, // Adjust the delay time in milliseconds
-            disableOnInteraction: false, // Allow manual navigation even during autoplay
+            delay: 2000,
+            disableOnInteraction: false,
           }}
           className="mySwiper"
         >
-          <SwiperSlide className="swiper-slide">
-            <img
-              src="https://c4.wallpaperflare.com/wallpaper/954/896/909/aeroplane-hd-wallpaper-preview.jpg"
-              alt=""
-            />
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <img
-              src="https://www.siliconrepublic.com/wp-content/uploads/2022/11/AdobeStock_20136083-718x523.jpeg"
-              alt=""
-            />
-          </SwiperSlide>
+          {/* Use map function to dynamically generate SwiperSlide components */}
+          {slidesData?.map((slide: any, index: any) => (
+            <SwiperSlide key={index} className="swiper-slide">
+              <img src={slide.imageUrl} alt="slide image" />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </>
