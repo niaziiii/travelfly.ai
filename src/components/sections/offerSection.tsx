@@ -1,6 +1,6 @@
 import React from "react";
-import PlacesCard from "../home/lists/placesCard";
 import Link from "next/link";
+import OfferCard from "../home/lists/offerCard";
 const OfferSection = () => {
   return (
     <>
@@ -13,10 +13,10 @@ const OfferSection = () => {
           </h2>
         </div>
         <div className=" flex flex-wrap justify-between align-middle">
-          <PlacesCard />
-          <PlacesCard />
-          <PlacesCard />
-          <PlacesCard />
+          <OfferCard />
+          <OfferCard />
+          <OfferCard />
+          <OfferCard />
         </div>
         <div className="w-full text-center my-4">
           <Link

@@ -151,7 +151,13 @@ input[type="range"]::-moz-range-thumb {
 .css-l3bzu8 .rs__cell {
   background: rgba(197, 8, 8, 0.2);
   margin: 1px;
+  border-radius: 8px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.css-l3bzu8 .rs__cell:hover {
+  color: white;
+  background: rgba(197, 8, 8, 0.7);
 }

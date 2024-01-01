@@ -5,15 +5,16 @@ import CalenderSection from "../sections/calenderSection";
 import MapSection from "../sections/mapSection";
 import OfferSection from "../sections/offerSection";
 import PopularCitiesSection from "../sections/popularCitiesSection";
+import TourAndActivitySecion from "../sections/tourAndActivSection";
 
 const slidesData = [
   {
     imageUrl:
-      "https://media.npr.org/assets/img/2021/10/06/gettyimages-1302813215_wide-6c48e5a6aff547d2703693450c4805978de47435-s1100-c50.jpg",
+      "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
   },
 ];
 
-const FlightsPage = () => {
+const HotelsPage = () => {
   return (
     <>
       <div className="w-full h-full">
@@ -21,10 +22,6 @@ const FlightsPage = () => {
         <div style={{ height: "500px" }}>
           <Carousel slidesData={slidesData} />
         </div>
-        {/* Popular cities */}
-        <PopularCitiesSection />
-        {/* Flifgt calender section */}
-        <CalenderSection />
         {/* map Section */}
         <MapSection />
         {/* slider */}
@@ -33,9 +30,10 @@ const FlightsPage = () => {
         </div>
         {/* Offer section */}
         <OfferSection />
+        <TourAndActivitySecion />
       </div>
     </>
   );
 };
 
-export default FlightsPage;
+export default HotelsPage;
