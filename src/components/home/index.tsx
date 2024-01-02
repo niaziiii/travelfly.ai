@@ -11,11 +11,10 @@ import AssociatesSection from "../sections/associatesSection";
 const slidesData = [
   {
     imageUrl:
-      "https://c4.wallpaperflare.com/wallpaper/954/896/909/aeroplane-hd-wallpaper-preview.jpg",
+      "https://image-prod.iol.co.za/16x9/800/SA-COMPANY-allows-travellers-to-book-a-flight-for-immediate-travel-without-worrying-about-footing-the-bill-right-away-Picture-Pexels?source=https://xlibris.public.prod.oc.inl.infomaker.io:8443/opencontent/objects/6e1abcd3-8cec-5e55-83d8-1bc7a652c905&operation=CROP&offset=0x0&resize=1920x1080",
   },
   {
-    imageUrl:
-      "https://www.siliconrepublic.com/wp-content/uploads/2022/11/AdobeStock_20136083-718x523.jpeg",
+    imageUrl: "https://pic.tripcdn.com/flight_v2/h5/bg_flights.png",
   },
 ];
 
