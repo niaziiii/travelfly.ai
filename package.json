@@ -16,7 +16,7 @@
     "flowbite-react": "^0.7.2",
     "i18next": "^23.7.13",
     "next": "14.0.4",
-    "react": "^18",
+    "react": "^18.2.0",
     "react-calendar": "^4.7.0",
     "react-dom": "^18",
     "react-dual-range-slider": "^1.0.4",

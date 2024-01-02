@@ -3,8 +3,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import TabComponent from "../home/lists/tabs";
 export default function Carousel({ slidesData }: any) {
   // Array of slide data
+  const tabs = ["Flights", "Hotels", "Trips.com"];
 
   return (
     <>
@@ -20,6 +22,7 @@ export default function Carousel({ slidesData }: any) {
             you. Just simply search and compare the best hotels and flights
             price with our travel finder.
           </p>
+          <TabComponent tabs={tabs} />
         </div>
         <Swiper
           slidesPerView={1}

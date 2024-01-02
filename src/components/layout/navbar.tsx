@@ -8,7 +8,7 @@ const NavBar = () => {
   };
   return (
     <>
-      <nav className="bg-white border-gray-200 sticky top-0 z-50">
+      <nav className="bg-white border-gray-200 sticky top-0 z-40">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
           <a
             href="#"
@@ -82,7 +82,39 @@ const NavBar = () => {
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
-                  Contact
+                  Car Rentals
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
+                >
+                  Taxi
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
+                >
+                  Tours
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
+                >
+                  Events & Tickets
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
+                >
+                  Visa Applications
                 </a>
               </li>
               <li>
@@ -91,7 +123,7 @@ const NavBar = () => {
                   data-dropdown-toggle="dropdownNavbar"
                   className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto "
                 >
-                  Dropdown{" "}
+                  Travel Blog
                   <svg
                     className="w-2.5 h-2.5 ms-2.5"
                     aria-hidden="true"
