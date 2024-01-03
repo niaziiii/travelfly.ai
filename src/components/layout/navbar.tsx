@@ -2,9 +2,14 @@
 import React, { useState } from "react";
 
 const NavBar = () => {
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
   const [isMobilenavOpen, setMobilenavOpen] = useState(false);
   const toggleDropdown = () => {
     setMobilenavOpen(!isMobilenavOpen);
+  };
+  const toggleChildDropdown = () => {
+    setIsDropdownVisible((prev) => !prev);
   };
   return (
     <>
@@ -120,12 +125,15 @@ const NavBar = () => {
               <li>
                 <button
                   id="dropdownNavbarLink"
+                  onClick={toggleChildDropdown}
                   data-dropdown-toggle="dropdownNavbar"
                   className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto "
                 >
                   Travel Blog
                   <svg
-                    className="w-2.5 h-2.5 ms-2.5"
+                    className={`w-2.5 h-2.5 ms-2.5 transition-transform ${
+                      isDropdownVisible ? "rotate-180" : ""
+                    }`}
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -142,7 +150,9 @@ const NavBar = () => {
                 </button>
                 <div
                   id="dropdownNavbar"
-                  className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  className={`z-10 ${
+                    isDropdownVisible ? "" : "hidden"
+                  } absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
                 >
                   <ul
                     className="py-2 text-sm text-gray-700 dark:text-gray-400"

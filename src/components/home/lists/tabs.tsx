@@ -9,7 +9,11 @@ const TabComponent = ({ tabs }: any) => {
   const [activeTab, setActiveTab] = useState(0);
 
   // Example content for each tab
-  const tabContents = [<FlightSearch />, <HotelSearch />, <Trip />];
+  const tabContents = [
+    <FlightSearch key="flightSearch" />,
+    <HotelSearch key="hotelSearch" />,
+    <Trip key="trip" />,
+  ];
 
   return (
     <div>
@@ -34,5 +38,4 @@ const TabComponent = ({ tabs }: any) => {
     </div>
   );
 };
-
 export default TabComponent;

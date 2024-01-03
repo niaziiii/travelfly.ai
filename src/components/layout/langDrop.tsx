@@ -5,7 +5,7 @@ const LangDrop = () => {
   return (
     <>
       {" "}
-      <Dropdown label="Languge" inline>
+      <Dropdown label="Language" inline>
         <Dropdown.Item>English</Dropdown.Item>
         <Dropdown.Item>French</Dropdown.Item>
         <Dropdown.Item>Arabic</Dropdown.Item>

@@ -8,6 +8,8 @@ import MapSection from "../sections/mapSection";
 import OfferSection from "../sections/offerSection";
 import PopularCitiesSection from "../sections/popularCitiesSection";
 import AssociatesSection from "../sections/associatesSection";
+import AboutCard from "../shared/aboutCard";
+import AboutCardSection from "../sections/aboutCardSection";
 const slidesData = [
   {
     imageUrl:
@@ -33,6 +35,7 @@ const HomePage = () => {
         {/* Company Info section */}
         <CompanyInfoSection />
         {/* map Section */}
+        <AboutCardSection />
         <MapSection />
         {/* Offer section */}
         <OfferSection />
