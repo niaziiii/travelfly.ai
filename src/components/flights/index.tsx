@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Carousel from "../shared/carousel";
 import CalenderSection from "../sections/calenderSection";

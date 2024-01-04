@@ -4,13 +4,17 @@ import LangDrop from "./langDrop";
 const Header = () => {
   return (
     <>
-      <nav className="bg-red-600 ">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-3 text-white">
+      <nav className="bg-red-700 ">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2 text-white">
           <div className="z-50">
             <LangDrop />
           </div>
+          <div className="text-center text-2xl font-bold">
+            ( Artificial Intelligence Travel MarketPlace ) <br />
+            create your own trip program
+          </div>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <div className="flex mt-4 space-x-4 sm:justify-center sm:mt-0">
+            <div className="flex mt-2 space-x-4 sm:justify-center sm:mt-0">
               <a href="#" className="text-white hover:text-gray-400 ">
                 <svg
                   className="w-5 h-5"

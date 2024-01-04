@@ -1,6 +1,6 @@
+"use client";
 import React, { useEffect } from "react";
 import {
-  LayersControl,
   MapContainer,
   Marker,
   TileLayer,

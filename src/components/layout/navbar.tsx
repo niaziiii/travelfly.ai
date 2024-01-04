@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const [isMobilenavOpen, setMobilenavOpen] = useState(false);
@@ -44,9 +44,9 @@ const NavBar = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
@@ -64,7 +64,7 @@ const NavBar = () => {
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                   aria-current="page"
                 >
-                  {t("home")}
+                  Home
                 </a>
               </li>
 
@@ -143,9 +143,9 @@ const NavBar = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="m1 1 4 4 4-4"
                     />
                   </svg>

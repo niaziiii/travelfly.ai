@@ -1,7 +1,10 @@
 "use client";
 import React, { useState } from "react";
+interface SearchProps {
+  placeHolder?: string;
+}
 
-const SearchableDropdown = () => {
+const SearchableDropdown = ({ placeHolder }: SearchProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const items = [
     "Item 1",
@@ -24,15 +27,16 @@ const SearchableDropdown = () => {
 
   return (
     <>
-      <div className="relative flex flex-col w-full mt-1 border-collapse rounded-xl ">
+      <div className="relative flex flex-col w-full border-collapse rounded-xl ">
         <input
-          className="flex items-center h-12 p-3 text-lg border-b border-gray-200 hover:bg-gray-200 rounded-lg  text-black focus:border-none focus:outline-red-700"
+          style={{ width: "100%" }}
+          className="flex items-center w-full h-12 p-3 text-lg border-gray-200 hover:bg-gray-100 rounded-lg  text-black focus:border-none focus:outline-red-600 "
           type="search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search…"
+          placeholder={placeHolder || "Search…"}
         />
-        <div className=" bg-white rounded-md overflow-auto max-h-60 absolute top-12 w-full">
+        <div className=" bg-white rounded-lg shadow-lg overflow-y-auto z-10 max-h-60 absolute top-12 w-full">
           {searchQuery === ""
             ? null
             : filteredItems.map((item, index) => (

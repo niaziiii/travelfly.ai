@@ -1,5 +1,9 @@
+"use client";
 import React from "react";
-import OsmMap from "../shared/map";
+import dynamic from "next/dynamic";
+const OsmMap = dynamic(() => import("../shared/map"), {
+  ssr: false,
+});
 
 const MapSection = () => {
   return (

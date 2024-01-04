@@ -3,7 +3,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 const enTranslations = {
-  home: "Home Hell",
+  home: "Home",
 };
 const frTranslation = {};
 // the translations in order to avoid the error: " Type 'DefaultTFuncReturn' is not assignable to type 'string' "
@@ -16,13 +16,13 @@ declare module "i18next" {
 // Function to get selected language from local storage
 const getSelectedLang = () => {
   // Check if the code is running in a browser environment
-  if (typeof window !== "undefined") {
-    // Get language from local storage
-    const lang = localStorage.getItem("i18nextLng");
-    if (lang) {
-      return lang;
-    }
+
+  // Get language from local storage
+  const lang = localStorage.getItem("i18nextLng");
+  if (lang) {
+    return lang;
   }
+
   return null;
 };
 

@@ -1,10 +1,7 @@
-"use client";
 import React from "react";
 import Carousel from "../shared/carousel";
-import CalenderSection from "../sections/calenderSection";
 import MapSection from "../sections/mapSection";
 import OfferSection from "../sections/offerSection";
-import PopularCitiesSection from "../sections/popularCitiesSection";
 import TourAndActivitySecion from "../sections/tourAndActivSection";
 import DestinationSection from "../sections/destinationSection";
 

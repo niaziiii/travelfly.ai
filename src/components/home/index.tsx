@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Carousel from "../shared/carousel";
 import PlacesInfo from "../sections/placesInfoSection";
@@ -25,7 +24,7 @@ const HomePage = () => {
     <>
       <div className="w-full h-full">
         {/* slider */}
-        <div style={{ height: "500px" }}>
+        <div style={{ height: "550px" }}>
           <Carousel slidesData={slidesData} />
         </div>
         {/* places info section */}
