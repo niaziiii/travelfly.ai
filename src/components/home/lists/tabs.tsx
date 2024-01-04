@@ -1,8 +1,7 @@
 "use client";
 import FlightSearch from "@/components/shared/flightSearch";
 import HotelSearch from "@/components/shared/hotelsSearch";
-import SearchableDropdown from "@/components/shared/searchableDropdown";
-import Trip from "@/components/shared/trip";
+import Trip from "@/components/shared/tripSearch";
 import React, { useState } from "react";
 
 const TabComponent = ({ tabs }: any) => {

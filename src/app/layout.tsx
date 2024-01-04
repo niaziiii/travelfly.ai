@@ -5,6 +5,7 @@ import NavBar from "@/components/layout/navbar";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import BackToTopButton from "@/components/shared/backtoTop";
+import "../language/i18n";
 
 export const metadata: Metadata = {
   title: "Trevelfly",

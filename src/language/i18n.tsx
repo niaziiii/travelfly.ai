@@ -1,7 +1,10 @@
+"use client";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-const enTranslations = {};
+const enTranslations = {
+  home: "Home Hell",
+};
 const frTranslation = {};
 // the translations in order to avoid the error: " Type 'DefaultTFuncReturn' is not assignable to type 'string' "
 declare module "i18next" {

@@ -6,16 +6,17 @@ import MapSection from "../sections/mapSection";
 import OfferSection from "../sections/offerSection";
 import PopularCitiesSection from "../sections/popularCitiesSection";
 import TourAndActivitySecion from "../sections/tourAndActivSection";
-import DestinationSection from "../sections/destinationSection";
+import MainSection from "./list/mainSection";
+import AmazingDestination from "./list/amazingDestination";
 
 const slidesData = [
   {
     imageUrl:
-      "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+      "https://www.ecorentacar.com/wp-content/uploads/2019/03/Luxury-Fleet-Banner.jpg",
   },
 ];
 
-const HotelsPage = () => {
+const CarRentalPage = () => {
   return (
     <>
       <div className="w-full h-full">
@@ -23,20 +24,17 @@ const HotelsPage = () => {
         <div style={{ height: "500px" }}>
           <Carousel slidesData={slidesData} />
         </div>
-        {/* destination section */}
-        <DestinationSection />
-        {/* map Section */}
-        <MapSection />
-        {/* slider */}
-        <div style={{ height: "500px" }}>
-          <Carousel slidesData={slidesData} />
-        </div>
+        {/* main section  */}
+        <MainSection />
+        {/* amazing destination Section  */}
+        <AmazingDestination />
         {/* Offer section */}
         <OfferSection />
+        {/* tour and activity */}
         <TourAndActivitySecion />
       </div>
     </>
   );
 };
 
-export default HotelsPage;
+export default CarRentalPage;

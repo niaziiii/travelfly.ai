@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
+  const { t } = useTranslation();
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const [isMobilenavOpen, setMobilenavOpen] = useState(false);
@@ -16,7 +18,7 @@ const NavBar = () => {
       <nav className="bg-white border-gray-200 sticky top-0 z-40">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
           <a
-            href="#"
+            href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
@@ -62,7 +64,7 @@ const NavBar = () => {
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                   aria-current="page"
                 >
-                  Home
+                  {t("home")}
                 </a>
               </li>
 
@@ -84,7 +86,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/car-rentals"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
                   Car Rentals
@@ -92,7 +94,7 @@ const NavBar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/taxi"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
                   Taxi
