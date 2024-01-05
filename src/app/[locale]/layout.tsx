@@ -30,6 +30,7 @@ export default function LocaleLayout({
     home: t("home"),
     flights: t("flights"),
     hotels: t("hotels"),
+    taxi: t("taxi"),
   };
   return (
     <html lang={locale}>

@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@/navigation";
 import { Dropdown } from "flowbite-react";
 import React from "react";
 const LangDrop = () => {
@@ -6,10 +7,12 @@ const LangDrop = () => {
     <>
       {" "}
       <Dropdown label="Language" inline>
-        <Dropdown.Item>English</Dropdown.Item>
-        <Dropdown.Item>French</Dropdown.Item>
-        <Dropdown.Item>Arabic</Dropdown.Item>
-        <Dropdown.Item>German</Dropdown.Item>
+        <Link href="/" locale="en">
+          <Dropdown.Item>English</Dropdown.Item>
+        </Link>
+        <Link href="/" locale="ar">
+          <Dropdown.Item>Arabic</Dropdown.Item>
+        </Link>
       </Dropdown>
     </>
   );

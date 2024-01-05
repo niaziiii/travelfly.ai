@@ -1,7 +1,7 @@
 "use client";
+import { Link } from "@/navigation";
 import React, { useState } from "react";
 // import { useTranslation } from "react-i18next";
-
 const NavBar = ({ content }: any) => {
   // const { t } = useTranslation();
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
@@ -59,70 +59,70 @@ const NavBar = ({ content }: any) => {
           >
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a
+                <Link
                   href="/"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                   aria-current="page"
                 >
                   {content.home}
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
+                <Link
                   href="/flights"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
-                  Flights
-                </a>
+                  {content.flights}
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/hotels"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
-                  Hotels
-                </a>
+                  {content.hotels}
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/car-rentals"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
-                  Car Rentals
-                </a>
+                  {content.carRentals}
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/taxi"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
-                  Taxi
-                </a>
+                  {content.taxi}
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
                   Tours
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
                   Events & Tickets
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
                   Visa Applications
-                </a>
+                </Link>
               </li>
               <li>
                 <button

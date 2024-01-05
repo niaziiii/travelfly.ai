@@ -1,5 +1,9 @@
 {
   "common": {},
+  "header": {
+    "title1": "Artificial Intelligence Travel MarketPlace",
+    "title2": "create your own trip program"
+  },
   "nav": {
     "home": "Home",
     "flights": "Flights",

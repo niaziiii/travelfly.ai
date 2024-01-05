@@ -1,7 +1,9 @@
 import React from "react";
 import LangDrop from "./langDrop";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
+  const t = useTranslations("header");
   return (
     <>
       <nav className="bg-red-700 ">
@@ -10,8 +12,10 @@ const Header = () => {
             <LangDrop />
           </div>
           <div className="text-center text-2xl font-bold">
-            ( Artificial Intelligence Travel MarketPlace ) <br />
-            create your own trip program
+            ({t("title1")}
+            )
+            <br />
+            {t("title2")}{" "}
           </div>
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
             <div className="flex mt-2 space-x-4 sm:justify-center sm:mt-0">
