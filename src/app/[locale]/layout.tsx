@@ -31,6 +31,7 @@ export default function LocaleLayout({
     flights: t("flights"),
     hotels: t("hotels"),
     taxi: t("taxi"),
+    carRentals: t("carRentals"),
   };
   return (
     <html lang={locale}>

@@ -24,7 +24,9 @@ export default function Carousel({ slidesData }: any) {
             price with our travel finder.
           </p>
           <SearchBar />
-          <TabComponent tabs={tabs} />
+          <div className="lg:block hidden">
+            <TabComponent tabs={tabs} />
+          </div>
         </div>
         <Swiper
           slidesPerView={1}

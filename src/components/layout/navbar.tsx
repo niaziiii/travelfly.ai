@@ -102,15 +102,16 @@ const NavBar = ({ content }: any) => {
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
+                  href="/tours"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0"
                 >
                   Tours
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/events
+                  "
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
                   Events & Tickets
@@ -118,16 +119,16 @@ const NavBar = ({ content }: any) => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/visa-applications"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
                   Visa Applications
                 </Link>
               </li>
-              <li>
+              <li className="relative">
                 <button
                   id="dropdownNavbarLink"
-                  onClick={toggleChildDropdown}
+                  onMouseEnter={toggleChildDropdown}
                   data-dropdown-toggle="dropdownNavbar"
                   className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto "
                 >
@@ -151,10 +152,11 @@ const NavBar = ({ content }: any) => {
                   </svg>
                 </button>
                 <div
+                  onMouseLeave={() => setIsDropdownVisible(false)}
                   id="dropdownNavbar"
                   className={`z-10 ${
                     isDropdownVisible ? "" : "hidden"
-                  } absolute font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
+                  } absolute right-0 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
                 >
                   <ul
                     className="py-2 text-sm text-gray-700 dark:text-gray-400"

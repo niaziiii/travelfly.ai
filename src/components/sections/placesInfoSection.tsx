@@ -1,6 +1,7 @@
 import React from "react";
 import PlacesCard from "../home/lists/placesCard";
 import { useTranslations } from "next-intl";
+import BookingCard from "../home/lists/booking";
 const PlacesInfo = () => {
   const t = useTranslations("index");
   return (
@@ -12,15 +13,17 @@ const PlacesInfo = () => {
             Perfect Holiday
           </h2>
         </div>
-        <div className=" flex flex-wrap justify-between align-middle">
+        <div className=" flex flex-wrap justify-between sm:justify-center align-middle">
           <PlacesCard />
           <PlacesCard />
           <PlacesCard />
           <PlacesCard />
-          <PlacesCard />
-          <PlacesCard />
-          <PlacesCard />
-          <PlacesCard />
+          <BookingCard />
+          <BookingCard />
+          <BookingCard />
+          <BookingCard />
+          <BookingCard />
+          <BookingCard />
         </div>
       </div>
     </>

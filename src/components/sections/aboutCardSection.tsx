@@ -3,7 +3,7 @@ import AboutCard from "../shared/aboutCard";
 const AboutCardSection = () => {
   return (
     <>
-      <div className="mx-auto my-8 max-w-screen-lg flex justify-between align-baseline">
+      <div className="max-w-screen-lg mx-auto my-8 flex flex-wrap justify-around items-center">
         <AboutCard />
         <AboutCard />
         <AboutCard />
