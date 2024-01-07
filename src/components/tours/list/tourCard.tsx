@@ -18,9 +18,9 @@ const TourCard = () => {
             </h5>
           </a>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            As one of the world's most densely populated areas, Hong Kong,
-            located on China's south coast is fascinating and frenetic. Hong
-            Kong is a city of contrasts where cultures collide...
+            As one of the world most densely populated areas, Hong Kong, located
+            on China south coast is fascinating and frenetic. Hong Kong is a
+            city of contrasts where cultures collide...
           </p>
           <a
             href="#"
