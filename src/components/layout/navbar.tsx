@@ -1,9 +1,9 @@
 "use client";
-import { Link } from "@/navigation";
+import { Link, useRouter } from "@/navigation";
 import React, { useState } from "react";
 // import { useTranslation } from "react-i18next";
 const NavBar = ({ content }: any) => {
-  // const { t } = useTranslation();
+  const router = useRouter();
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const [isMobilenavOpen, setMobilenavOpen] = useState(false);
@@ -128,6 +128,9 @@ const NavBar = ({ content }: any) => {
               <li className="relative">
                 <button
                   id="dropdownNavbarLink"
+                  onClick={() => {
+                    router.push("/travel-blog");
+                  }}
                   onMouseEnter={toggleChildDropdown}
                   data-dropdown-toggle="dropdownNavbar"
                   className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto "

@@ -1,3 +1,4 @@
+import { Link } from "@/navigation";
 import React from "react";
 
 const Footer = () => {
@@ -25,9 +26,9 @@ const Footer = () => {
             </p>
             <ul className="text-gray-600 flex flex-wrap mt-4">
               <li className="mx-2 my-1">
-                <a href="/" className="hover:underline">
+                <Link href="/travel-blog" className="hover:underline">
                   Blog
-                </a>
+                </Link>
               </li>
               <li className="mx-2 my-1">
                 <a href="/" className="hover:underline">
