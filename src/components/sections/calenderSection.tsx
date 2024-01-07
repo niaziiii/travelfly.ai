@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Select from "../shared/select";
 import Checkbox from "../shared/checkbox";
@@ -17,8 +18,13 @@ const CalenderSection = () => {
         </div>
         <div className="w-full flex border-2 rounded-md">
           <div className="w-1/4 border-r-2 p-4">
-            <Select />
-            <Select />
+            <div className="my-3">
+              <Select />
+            </div>
+            <div className="my-3">
+              <Select />
+            </div>
+
             <Checkbox />
             <Checkbox />
             <MultiRangeSlider

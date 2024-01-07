@@ -1,4 +1,9 @@
+"use client";
 import React from "react";
+import dynamic from "next/dynamic";
+const OsmMap = dynamic(() => import("../shared/map"), {
+  ssr: false,
+});
 
 const MapSection = () => {
   return (
@@ -12,12 +17,7 @@ const MapSection = () => {
           </h2>
         </div>
         <div className=" flex flex-wrap justify-between align-middle">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d212645.32770749403!2d73.086108!3d33.6161162!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1703943450515!5m2!1sen!2s"
-            width="100%"
-            height="450"
-            loading="lazy"
-          ></iframe>
+          <OsmMap />
         </div>
       </div>
     </>

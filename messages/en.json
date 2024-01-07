@@ -1,0 +1,22 @@
+{
+  "common": {},
+  "header": {
+    "title1": "Artificial Intelligence Travel MarketPlace",
+    "title2": "create your own trip program"
+  },
+  "nav": {
+    "home": "Home",
+    "flights": "Flights",
+    "hotels": "Hotels",
+    "carRentals": "Car Rentals",
+    "taxi": "Taxi",
+    "tours": "Tours",
+    "eventsTickets": "Events & Tickets",
+    "visaApplications": "Visa Applications",
+    "travelBlog": "Travel Blog"
+  },
+
+  "index": {
+    "hell": "Hello"
+  }
+}

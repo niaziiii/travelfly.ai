@@ -3,11 +3,11 @@ import React from "react";
 const CitiesCard = () => {
   return (
     <>
-      <div className="my-2 mx-1 lg:max-w-60 rounded-md md:max-w-56 sm:w-full xs:w-full bg-white border border-gray-200  shadow ">
+      <div className="my-2 mx-1 lg:max-w-72 rounded-md md:max-w-56 sm:w-full xs:w-full bg-white border border-gray-200  shadow ">
         <div className="relative">
           <img
-            className="rounded-t-md w-full"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzFvqqUQeMNFFQGPPNGfPq9VmAkT-DBfQKW_MB2zwTQCW_SSWYdDBZdOqKQSxCS272uio&usqp=CAU"
+            className="rounded-t-md w-full h-44"
+            src="https://static.saltinourhair.com/wp-content/uploads/2022/02/06165037/paris.jpg"
             alt=""
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold shadow-sm">

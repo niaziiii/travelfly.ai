@@ -1,17 +1,24 @@
 "use client";
+import { Link, useRouter } from "@/navigation";
 import React, { useState } from "react";
+// import { useTranslation } from "react-i18next";
+const NavBar = ({ content }: any) => {
+  const router = useRouter();
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
-const NavBar = () => {
   const [isMobilenavOpen, setMobilenavOpen] = useState(false);
   const toggleDropdown = () => {
     setMobilenavOpen(!isMobilenavOpen);
   };
+  const toggleChildDropdown = () => {
+    setIsDropdownVisible((prev) => !prev);
+  };
   return (
     <>
-      <nav className="bg-white border-gray-200 sticky top-0 z-50">
+      <nav className="bg-white border-gray-200 sticky top-0 z-40">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
           <a
-            href="#"
+            href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
@@ -37,9 +44,9 @@ const NavBar = () => {
             >
               <path
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
@@ -52,48 +59,87 @@ const NavBar = () => {
           >
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a
+                <Link
                   href="/"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                   aria-current="page"
                 >
-                  Home
-                </a>
+                  {content.home}
+                </Link>
               </li>
 
               <li>
-                <a
+                <Link
                   href="/flights"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
-                  Flights
-                </a>
+                  {content.flights}
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/hotels"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
-                  Hotels
-                </a>
+                  {content.hotels}
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/car-rentals"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
                 >
-                  Contact
-                </a>
+                  {content.carRentals}
+                </Link>
               </li>
               <li>
+                <Link
+                  href="/taxi"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
+                >
+                  {content.taxi}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tours"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0"
+                >
+                  Tours
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/events
+                  "
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
+                >
+                  Events & Tickets
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/visa-applications"
+                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 "
+                >
+                  Visa Applications
+                </Link>
+              </li>
+              <li className="relative">
                 <button
                   id="dropdownNavbarLink"
+                  onClick={() => {
+                    router.push("/travel-blog");
+                  }}
+                  onMouseEnter={toggleChildDropdown}
                   data-dropdown-toggle="dropdownNavbar"
                   className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 md:w-auto "
                 >
-                  Dropdown{" "}
+                  Travel Blog
                   <svg
-                    className="w-2.5 h-2.5 ms-2.5"
+                    className={`w-2.5 h-2.5 ms-2.5 transition-transform ${
+                      isDropdownVisible ? "rotate-180" : ""
+                    }`}
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -101,16 +147,19 @@ const NavBar = () => {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="m1 1 4 4 4-4"
                     />
                   </svg>
                 </button>
                 <div
+                  onMouseLeave={() => setIsDropdownVisible(false)}
                   id="dropdownNavbar"
-                  className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  className={`z-10 ${
+                    isDropdownVisible ? "" : "hidden"
+                  } absolute right-0 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}
                 >
                   <ul
                     className="py-2 text-sm text-gray-700 dark:text-gray-400"

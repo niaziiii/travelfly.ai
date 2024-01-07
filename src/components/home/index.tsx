@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Carousel from "../shared/carousel";
 import PlacesInfo from "../sections/placesInfoSection";
@@ -8,6 +7,8 @@ import MapSection from "../sections/mapSection";
 import OfferSection from "../sections/offerSection";
 import PopularCitiesSection from "../sections/popularCitiesSection";
 import AssociatesSection from "../sections/associatesSection";
+import AboutCard from "../shared/aboutCard";
+import AboutCardSection from "../sections/aboutCardSection";
 const slidesData = [
   {
     imageUrl:
@@ -23,7 +24,7 @@ const HomePage = () => {
     <>
       <div className="w-full h-full">
         {/* slider */}
-        <div style={{ height: "500px" }}>
+        <div style={{ height: "550px" }}>
           <Carousel slidesData={slidesData} />
         </div>
         {/* places info section */}
@@ -33,6 +34,7 @@ const HomePage = () => {
         {/* Company Info section */}
         <CompanyInfoSection />
         {/* map Section */}
+        <AboutCardSection />
         <MapSection />
         {/* Offer section */}
         <OfferSection />

@@ -18,8 +18,6 @@ const PopularCitiesSection = () => {
           <CitiesCard />
           <CitiesCard />
           <CitiesCard />
-          <CitiesCard />
-          <CitiesCard />
         </div>
       </div>
     </>

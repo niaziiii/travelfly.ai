@@ -1,5 +1,9 @@
 import React from "react";
 import RatingCard from "../shared/ratingCard";
+const link1 =
+  "https://widget.getyourguide.com/default/activities.frame?locale_code=en-US&widget=activities&number_of_items=6&partner_id=XLRMAV8&q=Hawaii&widget_created=1704549524377&host_font_family=Lora%2C%20serif&website=https%3A%2F%2Ftravelfly.ai%2Ftours%2F&visitor_id=925F76676C0147589055F4862AF6FCA2";
+const link2 =
+  "https://widget.getyourguide.com/default/activities.frame?locale_code=en-US&widget=activities&number_of_items=6&partner_id=XLRMAV8&q=Bahamas&widget_created=1704549524378&host_font_family=Lora%2C%20serif&website=https%3A%2F%2Ftravelfly.ai%2Ftours%2F&visitor_id=925F76676C0147589055F4862AF6FCA2";
 const TourAndActivitySecion = () => {
   return (
     <>
@@ -11,12 +15,8 @@ const TourAndActivitySecion = () => {
           </h2>
         </div>
         <div className=" flex flex-wrap justify-between align-middle">
-          <RatingCard />
-          <RatingCard />
-          <RatingCard />
-          <RatingCard />
-          <RatingCard />
-          <RatingCard />
+          <RatingCard src={link1} />
+          <RatingCard src={link2} />
         </div>
       </div>
     </>
