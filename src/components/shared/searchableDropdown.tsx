@@ -30,7 +30,7 @@ const SearchableDropdown = ({ placeHolder }: SearchProps) => {
       <div className="relative flex flex-col w-full border-collapse rounded-xl ">
         <input
           style={{ width: "100%" }}
-          className="flex items-center w-full h-12 p-3 text-lg border-gray-200 hover:bg-gray-100 rounded-lg  text-black focus:border-none focus:outline-red-600 "
+          className="flex items-center w-full h-12 p-3 text-lg border-gray-200 hover:bg-gray-100 rounded-lg  text-black focus:border-none focus:ring-red-600  "
           type="search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
