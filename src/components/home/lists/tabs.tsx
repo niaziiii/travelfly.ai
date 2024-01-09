@@ -19,13 +19,13 @@ const TabComponent = ({ tabs }: any) => {
               index === activeTab
                 ? "bg-red-600 text-white"
                 : "bg-gray-100 text-gray-800"
-            } py-1 px-4 rounded-t-lg font-semibold flex justify-center items-center text-center text-md w-full focus:outline-none mx-1`}
+            } py-1 px-4 rounded-t-lg font-semibold flex justify-center items-center text-center text-md w-full focus:outline-none mr-1`}
           >
             {tab.name}
           </Link>
         ))}
       </div>
-      <div className="mt-1 bg-white max-w-screen-lg rounded-xl p-4">
+      <div className="mt-0.5 bg-white max-w-screen-lg rounded-xl p-4">
         {/* {tabContents[activeTab]} */}
         <HotelSearch />
       </div>
