@@ -13,7 +13,7 @@ const PlacesInfo = () => {
             Perfect Holiday
           </h2>
         </div>
-        <div className=" flex flex-wrap justify-between sm:justify-center align-middle">
+        <div className=" flex flex-wrap justify-between sm:justify-center items-center">
           <PlacesCard />
           <PlacesCard />
           <PlacesCard />

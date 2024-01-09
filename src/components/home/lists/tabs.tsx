@@ -19,7 +19,7 @@ const TabComponent = ({ tabs }: any) => {
               index === activeTab
                 ? "bg-red-600 text-white"
                 : "bg-gray-100 text-gray-800"
-            } py-1 px-4 rounded-t-lg font-bold flex justify-center items-center text-center text-md w-full focus:outline-none mx-1`}
+            } py-1 px-4 rounded-t-lg font-semibold flex justify-center items-center text-center text-md w-full focus:outline-none mx-1`}
           >
             {tab.name}
           </Link>
