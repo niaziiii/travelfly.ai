@@ -16,6 +16,7 @@ export default function Carousel({ slidesData, headContent }: any) {
     { name: "Tours", link: "/tours" },
     { name: "Events/Tickets", link: "/events" },
     { name: "Visa Applications", link: "/visa-applications" },
+    { name: "Blog", link: "/travel-blog" },
   ];
 
   return (

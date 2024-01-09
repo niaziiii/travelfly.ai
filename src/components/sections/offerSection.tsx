@@ -16,6 +16,7 @@ const OfferSection = () => {
           <iframe
             className="w-full"
             style={{ minHeight: "120vh" }}
+            scrolling="no"
             src="https://affiliate.klook.com/widget/render?adid=782480&lang=en&currency=USD&cardh=126&padding=92&lgh=470&edgevalue=655&cid=106&tid=1&amount=5&prod=dynamic_widget&uid=1"
           ></iframe>
         </div>
