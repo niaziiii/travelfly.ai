@@ -9,6 +9,7 @@ import PopularCitiesSection from "../sections/popularCitiesSection";
 import AssociatesSection from "../sections/associatesSection";
 import AboutCard from "../shared/aboutCard";
 import AboutCardSection from "../sections/aboutCardSection";
+import { useTranslations } from "next-intl";
 const slidesData = [
   {
     imageUrl:
@@ -20,12 +21,17 @@ const slidesData = [
 ];
 
 const HomePage = () => {
+  const headT = useTranslations("header");
+  const headContent = {
+    title1: headT("title1"),
+    title2: headT("title2"),
+  };
   return (
     <>
       <div className="w-full h-full">
         {/* slider */}
         <div style={{ height: "550px" }}>
-          <Carousel slidesData={slidesData} />
+          <Carousel slidesData={slidesData} headContent={headContent} />
         </div>
         {/* places info section */}
         <PlacesInfo />
@@ -42,9 +48,9 @@ const HomePage = () => {
         <PopularCitiesSection />
         {/* Associates Section */}
         <AssociatesSection />
-        <div style={{ height: "480px" }}>
+        {/* <div style={{ height: "480px" }}>
           <Carousel slidesData={slidesData} />
-        </div>
+        </div> */}
       </div>
     </>
   );

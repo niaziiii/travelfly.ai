@@ -16,18 +16,18 @@ const NavBar = ({ content }: any) => {
   return (
     <>
       <nav className="bg-white border-gray-200 sticky top-0 z-40">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-          <a
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-2">
+          <Link
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
               src="https://travelfly.ai/wp-content/uploads/2023/12/TravelFly-1-1536x459.png"
-              className="h-12"
+              className="h-16"
               alt="Travelfly Logo"
             />
-          </a>
-          <button
+          </Link>
+          {/* <button
             onClick={toggleDropdown}
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
@@ -201,7 +201,7 @@ const NavBar = ({ content }: any) => {
                 </div>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>
