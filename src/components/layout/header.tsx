@@ -11,12 +11,12 @@ const Header = () => {
           <div className="z-50">
             <LangDrop />
           </div>
-          <div className="text-center text-2xl font-bold">
+          {/* <div className="text-center text-2xl font-bold">
             ({t("title1")}
             )
             <br />
             {t("title2")}{" "}
-          </div>
+          </div> */}
           <div className="flex items-center space-x-6 rtl:space-x-reverse">
             <div className="flex mt-2 space-x-4 sm:justify-center sm:mt-0">
               <a href="#" className="text-red-600 hover:text-gray-400 ">

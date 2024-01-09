@@ -4,7 +4,7 @@ import SearchableDropdown from "./searchableDropdown";
 const SearchBar = () => {
   return (
     <>
-      <div className="w-lg flex items-center p-5 my-4 rounded-xl bg-white">
+      <div className="w-lg flex items-center p-7 my-4 rounded-xl bg-white">
         <SearchableDropdown placeHolder="Searching  all cheap prices through the web in one place " />
         <div className="mx-2 ">
           <button
