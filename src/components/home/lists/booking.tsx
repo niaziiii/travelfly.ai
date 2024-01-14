@@ -3,7 +3,7 @@ import React from "react";
 const BookingCard = () => {
   return (
     <>
-      <div className="my-2 mx-1 lg:max-w-80  md:max-w-80 sm:w-full xs:w-full ">
+      <div className="my-2 mx-1 w-80">
         <iframe
           className="w-full"
           style={{ minHeight: 350 }}
