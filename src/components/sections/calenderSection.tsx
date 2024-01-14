@@ -24,7 +24,15 @@ const CalenderSection = () => {
 
   return (
     <>
-      <div className="lg:mx-10 my-8">
+      <div className="lg:mx-16 my-8">
+        <div className="mb-2">
+          <h2 className="lg:text-2xl text-md md:text-2xl text-red-700 font-yes">
+            Plan Your Journey
+          </h2>
+          <h2 className="font-extrabold lg:text-7xl md:text-7xl text-3xl text-black font-serif">
+            Flight Calendar
+          </h2>
+        </div>
         <div id="widget-container"></div>
       </div>
     </>

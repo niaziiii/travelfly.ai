@@ -1,11 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
 
-const CitiesCard = ({ index }: any) => {
+const CitiesCard = ({ index, name }: any) => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src =
-      "https://tp.media/content?currency=usd&trs=294439&shmarker=516658&locale=en_us&limit=7&powered_by=true&primary=%23B9A0FD&promo_id=7292&campaign_id=200";
+    script.src = `https://tp.media/content?currency=usd&trs=294439&shmarker=516658&origin=${name}&locale=en_us&limit=6&powered_by=true&primary=%23B9A0FD&promo_id=7292&campaign_id=200`;
     script.async = true;
     script.charset = "utf-8";
 

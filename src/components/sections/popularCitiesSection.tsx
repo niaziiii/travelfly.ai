@@ -1,6 +1,14 @@
 import React from "react";
 import CitiesCard from "../home/lists/citiesCard";
 const PopularCitiesSection = () => {
+  const cityIndices = [
+    { index: 1, name: "LON" },
+    { index: 2, name: "DXB" },
+    { index: 3, name: "PAR" },
+    { index: 4, name: "AYT" },
+    { index: 5, name: "JKT" },
+    { index: 6, name: "BKK" },
+  ];
   return (
     <>
       {" "}
@@ -13,13 +21,15 @@ const PopularCitiesSection = () => {
             Popular Cities
           </h2>
         </div>
-        <div className=" flex flex-wrap justify-between align-middle">
-          <CitiesCard index="1" />
-          <CitiesCard index="2" />
-          <CitiesCard index="3" />
-          <CitiesCard index="4" />
-          <CitiesCard index="5" />
-          <CitiesCard index="6" />
+        <div className="flex flex-wrap justify-between align-middle">
+          {/* Use .map() to render CitiesCard components dynamically */}
+          {cityIndices.map((city) => (
+            <CitiesCard
+              key={city.index}
+              index={city.index.toString()}
+              name={city.name}
+            />
+          ))}
         </div>
       </div>
     </>
