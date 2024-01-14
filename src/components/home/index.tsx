@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Carousel from "../shared/carousel";
 import PlacesInfo from "../sections/placesInfoSection";
 import CalenderSection from "../sections/calenderSection";
+// const CalenderSection = lazy(() => import("../sections/calenderSection"));
 import CompanyInfoSection from "../sections/companyInfoSection";
 import MapSection from "../sections/mapSection";
 import OfferSection from "../sections/offerSection";
@@ -36,6 +37,9 @@ const HomePage = () => {
         {/* places info section */}
         <PlacesInfo />
         {/* Flifgt calender section */}
+        {/* <Suspense fallback={<div>Loading...</div>}>
+          <CalenderSection />
+        </Suspense> */}
         <CalenderSection />
         {/* Company Info section */}
         <CompanyInfoSection />

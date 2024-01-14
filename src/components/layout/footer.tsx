@@ -10,7 +10,7 @@ const Footer = () => {
             <Link href="/" className="flex items-center">
               <img
                 src="https://travelfly.ai/wp-content/uploads/2023/12/TravelFly-1-1536x459.png"
-                className="mx-3 my-6 h-28 max-w-screen-sm"
+                className="mx-3 xs:m-auto my-6 max-w-full h-auto" // Adjusted classes here
                 alt="travelfly Logo"
               />
             </Link>

@@ -1,46 +1,31 @@
 "use client";
-import React from "react";
-import Select from "../shared/select";
-import Checkbox from "../shared/checkbox";
-import MultiRangeSlider from "../shared/range";
-import Calendar from "../shared/calender";
+import React, { useEffect } from "react";
+
 const CalenderSection = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://tp.media/content?currency=usd&trs=294439&shmarker=516658&locale=en_us&powered_by=true&one_way=false&only_direct=false&period=year&range=1%2C14&primary=%23CE1212ff&color_background=%23ffffff&dark=%23000000&light=%23FFFFFF&achieve=%23BE1B15ff&promo_id=7264&campaign_id=200";
+    script.async = true;
+    script.charset = "utf-8";
+
+    const widgetContainer: any = document.getElementById("widget-container");
+
+    // Append the script to the DOM
+    widgetContainer.appendChild(script);
+
+    // Cleanup script when component is unmounted
+    return () => {
+      if (widgetContainer.contains(script)) {
+        widgetContainer.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <div className="mx-auto my-8 max-w-screen-lg">
-        <div className="mb-2">
-          <h2 className="  text-2xl text-red-700 font-yes">
-            Plan your journey
-          </h2>
-          <h2 className=" font-extrabold text-7xl text-black font-serif">
-            Flight Calender
-          </h2>
-        </div>
-        <div className="w-full flex border-2 rounded-md">
-          <div className="w-1/4 border-r-2 p-4">
-            <div className="my-3">
-              <Select />
-            </div>
-            <div className="my-3">
-              <Select />
-            </div>
-
-            <Checkbox />
-            <Checkbox />
-            <MultiRangeSlider
-              min={0}
-              max={30}
-              onChange={({ min, max }) =>
-                console.log(`min = ${min}, max = ${max}`)
-              }
-            />
-          </div>
-          <div className="w-3/4">
-            <div className="w-full p-8">
-              <Calendar />
-            </div>
-          </div>
-        </div>
+      <div className="lg:mx-10 my-8">
+        <div id="widget-container"></div>
       </div>
     </>
   );

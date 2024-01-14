@@ -3,7 +3,7 @@ import React from "react";
 const InfoCard = () => {
   return (
     <>
-      <div className="lg:w-80 md:w-72 sm:w-full xs:w-full m-2 p-6 bg-white shadow-xl border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
+      <div className="lg:w-80 md:w-72 sm:w-full w-full m-2 p-6 bg-white shadow-xl border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
         <svg
           className="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3"
           aria-hidden="true"

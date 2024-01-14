@@ -22,7 +22,7 @@ export default function Carousel({ slidesData, headContent }: any) {
   return (
     <>
       <div className="w-full h-full relative">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  z-10  text-white">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-3 max-w-screen-lg  z-10  text-white">
           {/* <h1 className="font-extrabold text-4xl font-serif space-x-1 drop-shadow-xl">
             Relax & Enjoy
             <br /> the World
@@ -33,8 +33,9 @@ export default function Carousel({ slidesData, headContent }: any) {
           <h1 className="font-extrabold text-xl font-serif space-x-1 drop-shadow-xl">
             {headContent?.title2}
           </h1>
-
-          <SearchBar />
+          <div className="">
+            <SearchBar />
+          </div>
           <div className="lg:block hidden">
             <TabComponent tabs={tabs} />
           </div>
