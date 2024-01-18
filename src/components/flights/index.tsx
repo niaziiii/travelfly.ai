@@ -26,12 +26,10 @@ const FlightsPage = () => {
         </HeroSection>
         {/* Popular cities */}
         <PopularCitiesSection />
-        {/* Flifgt calender section */}
+        {/* Flight calender section */}
         <CalenderSection />
         {/* map Section */}
         <MapSection />
-        {/* slider */}
-        <HeroSection imageUrl={imageUrl} />
         {/* Offer section */}
         <OfferSection />
       </div>

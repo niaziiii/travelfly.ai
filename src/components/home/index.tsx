@@ -23,6 +23,17 @@ const slidesData = [
 
 const HomePage = () => {
   const headT = useTranslations("header");
+  const t = useTranslations("nav");
+  const navContent = {
+    home: t("home"),
+    flights: t("flights"),
+    hotels: t("hotels"),
+    taxi: t("taxi"),
+    carRentals: t("carRentals"),
+    tours: t("tours"),
+    eventsTickets: t("eventsTickets"),
+    visaApplications: t("visaApplications"),
+  };
   const headContent = {
     title1: headT("title1"),
     title2: headT("title2"),
@@ -32,7 +43,11 @@ const HomePage = () => {
       <div className="w-full h-full">
         {/* slider */}
         <div style={{ height: "550px" }}>
-          <Carousel slidesData={slidesData} headContent={headContent} />
+          <Carousel
+            slidesData={slidesData}
+            headContent={headContent}
+            navContent={navContent}
+          />
         </div>
         {/* places info section */}
         <PlacesInfo />
