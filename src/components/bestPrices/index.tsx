@@ -21,7 +21,7 @@ const slidesData = [
   },
 ];
 
-const HomePage = () => {
+const BestPricesPage = () => {
   const headT = useTranslations("header");
   const t = useTranslations("nav");
   const navContent = {
@@ -41,38 +41,14 @@ const HomePage = () => {
   return (
     <>
       <div className="w-full h-full">
-        {/* slider */}
-        <div style={{ height: "100vh" }}>
-          <Carousel
-            slidesData={slidesData}
-            headContent={headContent}
-            navContent={navContent}
-          />
-        </div>
         {/* places info section */}
-        <PlacesInfo />
-        {/* Flifgt calender section */}
-        {/* <Suspense fallback={<div>Loading...</div>}>
-          <CalenderSection />
-        </Suspense> */}
         <CalenderSection />
         {/* Company Info section */}
-        <CompanyInfoSection />
-        {/* map Section */}
-        <AboutCardSection />
         <MapSection />
-        {/* Offer section */}
-        <OfferSection />
-        {/* Popular cities */}
         <PopularCitiesSection />
-        {/* Associates Section */}
-        <AssociatesSection />
-        {/* <div style={{ height: "480px" }}>
-          <Carousel slidesData={slidesData} />
-        </div> */}
       </div>
     </>
   );
 };
 
-export default HomePage;
+export default BestPricesPage;

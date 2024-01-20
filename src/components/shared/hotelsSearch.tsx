@@ -1,33 +1,31 @@
 "use client";
-import React from "react";
-import SearchableDropdown from "./searchableDropdown";
-import { Button, Datepicker } from "flowbite-react";
-import Select from "./select";
+import React, { useEffect } from "react";
 
 const HotelSearch = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://tp.media/content?currency=usd&trs=294450&shmarker=516658&show_hotels=true&powered_by=false&locale=en&searchUrl=search.hotellook.com&color_button=%23C3210Dff&color_icons=%23C3210DFF&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%23C3210DFF&border_radius=14&no_labels=true&plain=true&promo_id=7873&campaign_id=101";
+    script.async = true;
+    script.charset = "utf-8";
+
+    const widgetotelSearch: any =
+      document.getElementById(`widget-hotel-search`);
+
+    // Append the script to the DOM
+    widgetotelSearch.appendChild(script);
+
+    // Cleanup script when component is unmounted
+    return () => {
+      if (widgetotelSearch.contains(script)) {
+        widgetotelSearch.removeChild(script);
+      }
+    };
+  }, []);
   return (
     <>
-      <div className=" flex justify-center items-center">
-        <div className="mx-1 w-72">
-          <SearchableDropdown />
-        </div>
-        <div className="mx-1 min-w-40">
-          <Datepicker />
-        </div>
-        <div className="mx-1 min-w-40">
-          <Datepicker />
-        </div>
-        <div className="mx-1 min-w-40">
-          <Select />
-        </div>
-        <div className="mx-1 ">
-          <button
-            type="button"
-            className="py-2.5 px-5 text-sm font-medium text-red-600 focus:outline-none bg-white rounded-lg border border-red-600 hover:bg-red-700 hover:text-white focus:z-10  "
-          >
-            Search
-          </button>
-        </div>
+      <div>
+        <div id={`widget-hotel-search`}></div>
       </div>
     </>
   );

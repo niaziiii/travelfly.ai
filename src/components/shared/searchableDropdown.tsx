@@ -2,29 +2,15 @@
 import React, { useState } from "react";
 interface SearchProps {
   placeHolder?: string;
+  setSearchQuery?: any;
+  searchQuery?: string;
 }
 
-const SearchableDropdown = ({ placeHolder }: SearchProps) => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const items = [
-    "Item 1",
-    "Item 2",
-    "Item 3",
-    "Item 4",
-    "Item 1",
-    "Item 2",
-    "Item 3",
-    "Item 4",
-    "Item 1",
-    "Item 2",
-    "Item 3",
-    "Item 4",
-  ];
-
-  const filteredItems = items.filter((item) =>
-    item.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
+const SearchableDropdown = ({
+  placeHolder,
+  setSearchQuery,
+  searchQuery,
+}: SearchProps) => {
   return (
     <>
       <div className="relative flex flex-col w-full border-collapse rounded-xl ">
@@ -36,18 +22,6 @@ const SearchableDropdown = ({ placeHolder }: SearchProps) => {
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder={placeHolder || "Search…"}
         />
-        <div className=" bg-white rounded-lg shadow-lg overflow-y-auto z-10 max-h-60 absolute top-12 w-full">
-          {searchQuery === ""
-            ? null
-            : filteredItems.map((item, index) => (
-                <li
-                  key={index}
-                  className="flex items-center p-2 text-gray-950 text-lg hover:bg-gray-200"
-                >
-                  {item}
-                </li>
-              ))}
-        </div>
       </div>
     </>
   );

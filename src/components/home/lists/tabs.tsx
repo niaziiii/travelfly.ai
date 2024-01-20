@@ -25,7 +25,7 @@ const TabComponent = ({ tabs }: any) => {
           </Link>
         ))}
       </div>
-      <div className="mt-0.5 bg-white max-w-screen-lg rounded-xl p-4">
+      <div className="mt-0.5 max-w-screen-lg">
         {/* {tabContents[activeTab]} */}
         <HotelSearch />
       </div>
