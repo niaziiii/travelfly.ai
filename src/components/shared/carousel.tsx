@@ -5,18 +5,17 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import TabComponent from "../home/lists/tabs";
 import SearchBar from "./searchBar";
-export default function Carousel({ slidesData, headContent }: any) {
+export default function Carousel({ slidesData, headContent, navContent }: any) {
   // Array of slide data
   const tabs = [
-    { name: "Home", link: "/" },
-    { name: "Flights", link: "/flights" },
-    { name: "Hotels", link: "/hotels" },
-    { name: "Car Rentals", link: "/car-rentals" },
-    { name: "Taxi", link: "/taxi" },
-    { name: "Tours", link: "/tours" },
-    { name: "Events/Tickets", link: "/events" },
-    { name: "Visa Applications", link: "/visa-applications" },
-    { name: "Blog", link: "/travel-blog" },
+    { name: navContent?.home, link: "/" },
+    { name: navContent?.flights, link: "/flights" },
+    { name: navContent?.hotels, link: "/hotels" },
+    { name: navContent?.carRentals, link: "/car-rentals" },
+    { name: navContent?.taxi, link: "/taxi" },
+    { name: navContent.tours, link: "/tours" },
+    { name: navContent.eventsTickets, link: "/events" },
+    { name: navContent.visaApplications, link: "/visa-applications" },
   ];
 
   return (
