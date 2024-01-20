@@ -4,6 +4,7 @@ import OfferSection from "../sections/offerSection";
 import TourAndActivitySecion from "../sections/tourAndActivSection";
 import TaxiSearchSection from "./list/taxiSearchSection";
 import HeroSection from "../sections/heroSection";
+import TaxiSearch from "./list/taxiSearch";
 
 const imageUrl =
   "https://www.wien.info/resource/image/310870/19x10/1200/630/e93154b2abfe063448494c5c1c02029f/24FD80255D998FD5B520793F866F6217/taxi-schilder.jpg";
@@ -20,11 +21,7 @@ const TaxiPage = () => {
           heading="Travel Satisfaction Guaranteed"
           description={description}
         >
-          <iframe
-            className="w-screen px-10"
-            style={{ minHeight: 220 }}
-            src="https://widget.kiwitaxi.com/search_form-en-6.html#refparam=tpo&refid=4194fa3d9db94335bb6cc575d-507485&refparam2=tpo_bid&refid2=c15407d4&country=0&placefrom=&placeto=&language=en&currency=USD"
-          ></iframe>
+          <TaxiSearch />
         </HeroSection>
         <TaxiSearchSection />
         {/* Offer section */}

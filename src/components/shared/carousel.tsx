@@ -13,9 +13,9 @@ export default function Carousel({ slidesData, headContent, navContent }: any) {
     { name: navContent?.hotels, link: "/hotels" },
     { name: navContent?.carRentals, link: "/car-rentals" },
     { name: navContent?.taxi, link: "/taxi" },
-    { name: navContent.tours, link: "/tours" },
-    { name: navContent.eventsTickets, link: "/events" },
-    { name: navContent.visaApplications, link: "/visa-applications" },
+    { name: navContent?.tours, link: "/tours" },
+    { name: navContent?.eventsTickets, link: "/events" },
+    { name: navContent?.visaApplications, link: "/visa-applications" },
   ];
 
   return (
